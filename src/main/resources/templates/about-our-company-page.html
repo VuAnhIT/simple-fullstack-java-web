@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--region head-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Company</title>
+
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="about-our-company-page/about-our-company.css"
+    th:href="@{/about-our-company-page/about-our-company.css}">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap-4.5.3-dist/css/bootstrap.min.css}">
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" th:href="@{/vendor/font-awesome-4.7.0/css/font-awesome.min.css}">
+</head>
+<!--endregion head-->
+
+<!--region body-->
+<body>
+<div class="container-fluid _site-wrapper">
+    <!--region HEADER -->
+    <header th:replace="fragments/header.html">
+    </header>
+    <!--endregion HEADER -->
+
+    <!--region MAIN-CONTENT-->
+    <div class="col-md-12 _main-content">
+        <div class="row">
+            <!--region LEFT SECTION-->
+            <div class="col-md-9 _left-content">
+
+                <!--region about our company-->
+                <div class="row _about-our-company">
+                    <div class="_about-our-company-heading">
+                        <h3>About Our Company</h3>
+                    </div>
+
+                    <div class="_about-our-company-content-wrapper">
+                        <div class="_about-our-company-content col-12 px-0">
+                            <div class="float-right _about-our-company-image">
+                                <img th:src="@{/common/machines-image/i285978589337195392._rsw480h360_szw480h360_.jpg}"
+                                     src="common/machines-image/i285978589337195392._rsw480h360_szw480h360_.jpg">
+                            </div>
+                            <div class="_about-our-company-description">
+                                <p> Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+                                    vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+                                    illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+                                    dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait
+                                    nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil
+                                    imperdiet doming id quod mazim placerat facer possim assum. Typi non habent
+                                    claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+                                    Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                                    Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+                                    lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram,
+                                    anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta
+                                    decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in
+                                    futurum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--endregion about our company-->
+            </div>
+            <!--endregion LEFT SECTION-->
+
+            <!--region RIGHT SECTION-->
+            <div class="col-md-3">
+                <!--region sidebar-->
+                <div class="sidebar">
+                    <div class="_share-box">
+                        <div class="_heading-share-box">
+                            <h4>Share this page</h4>
+                        </div>
+                        <div class="_content-share-box">
+                            <ul>
+                                <li>
+                                    <a class="_link-share-box" href="#">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                        <span>Share on Facebook</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="_link-share-box" href="#">
+                                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                                        <span>Share on Twitter</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--endregion sidebar-->
+
+                    <!--region viral box-->
+                    <div class="_viral-box">
+                        <div class="_heading-viral-box">
+                            <h4>Create a website</h4>
+                        </div>
+
+                        <div class="_content-viral-box">
+                            <p>Everybody can create a website, it's easy.</p>
+                            <div class="_btn-viral-box">
+                                <a href="#" class="_link-viral-box">
+                                    Try it for FREE now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--endregion viral box-->
+                </div>
+            </div>
+            <!--endregion RIGHT SECTION-->
+        </div>
+    </div>
+    <!--endregion MAIN-CONTENT SECTION-->
+
+    <!--region FOOTER-->
+    <footer th:replace="fragments/footer">
+    </footer>
+    <!--endregion footer-->
+
+    <!--region Javascript-->
+    <!--Jquery script-->
+    <script th:src="@{/vendor/jquery/jquery-3.5.1.slim.min.js}"></script>
+    <script th:src="@{/vendor/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js}"></script>
+    <!--endregion Javascript-->
+</div>
+</body>
+<!--endregion body-->
+
+</html>

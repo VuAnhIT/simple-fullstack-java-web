@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--region head-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="contact-page/contact-page.css"
+          th:href="@{/contact-page/contact-page.css}">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap-4.5.3-dist/css/bootstrap.min.css}">
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" th:href="@{/vendor/font-awesome-4.7.0/css/font-awesome.min.css}">
+</head>
+<!--endregion head-->
+
+<!--region body-->
+<body>
+<div class="container-fluid _site-wrapper">
+    <!--region HEADER -->
+    <header th:replace="fragments/header.html">
+    </header>
+    <!--endregion HEADER -->
+
+    <!--region MAIN-CONTENT-->
+    <div class="col-md-12 _main-content">
+        <div class="row">
+            <!--region LEFT SECTION-->
+            <div class="col-md-9 _left-content">
+                <!--region contact-->
+                <!--region contact box-->
+                <div class="_contact-box">
+                    <h1 class="_contact-title">Contact</h1>
+                    <div class="_contact-content">
+                        <h4>Construction Machinery</h4>
+                        <span>Address:</span>
+                        <br>
+                        <span>City:</span>
+                        <br>
+                        <span>Country:</span>
+                        <br>
+                        <br>
+                        <span>Tel: 123456</span>
+                        <br>
+                        <span>Email: your-email@your-email.com</span>
+                    </div>
+                </div>
+                <!--endregion contact box-->
+                <!--region contact form-->
+                <div class="_contact-form">
+                    <div class="_contact-submit-success col-12"
+                         th:if="${submitSuccess}">Thank you for your message.
+                    </div>
+
+                    <p>Write your message here. Fill out the form:</p>
+
+                    <form id=" form" th:action="@{/save-submit}" th:object="${clientSubmission}"
+                          method="post">
+                        <!--Submitting-->
+                        <div th:if="${submitSuccess == null}" class="row mx-0">
+                            <input th:field="*{name}"
+                                   th:classappend="${#fields.hasErrors('name')}? _error-input"
+                                   class="" name="name" type="text"
+                                   placeholder="Write your name here">
+                            <div class="_contact-form-empty-space-between-input"></div>
+                            <input th:if="${submitSuccess == null}" th:field="*{email}" class="" name="email"
+                                   type="text"
+                                   th:classappend="${#fields.hasErrors('email')}? _error-input"
+                                   placeholder="Write your email here">
+                            <textarea th:field="*{message}" type="text" name="message"
+                                      th:classappend="${#fields.hasErrors('message')}? _error-input"
+                                      placeholder="Write your message here"
+                                      class="col-md-12"></textarea>
+
+                            <div class="col-12">
+                                <button id="submit-button" type="submit" th:disabled="${#fields.hasErrors()}"
+                                        th:style="${#fields.hasErrors()}? 'opacity:0.5'">Send - Click here
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--successful submit-->
+                        <div th:if="${submitSuccess}" class="row mx-0">
+                            <input th:field="*{name}" class="" name="name"
+                                   type="text" placeholder="Write your name here" disabled
+                                   style="background-color: #eee; cursor: not-allowed">
+                            <div class="_contact-form-empty-space-between-input"></div>
+                            <input th:field="*{email}" class="" name="email" type="text"
+                                   placeholder="Write your email here" disabled
+                                   style="background-color: #eee; cursor: not-allowed">
+                            <textarea th:field="*{message}" type="text" name="message"
+                                      placeholder="Write your message here"
+                                      class="col-md-12" disabled
+                                      style="background-color: #eee; cursor: not-allowed"></textarea>
+
+                            <div class="col-12">
+                                <button id="submit-button" type="submit" disabled style="opacity: 0.5">
+                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                    Sent
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!--endregion contact form-->
+                <!--endregion contact-->
+            </div>
+            <!--endregion LEFT SECTION-->
+
+            <!--region RIGHT SECTION-->
+            <div class="col-md-3">
+                <!--region sidebar-->
+                <div class="sidebar">
+                    <div class="_share-box">
+                        <div class="_heading-share-box">
+                            <h4>Share this page</h4>
+                        </div>
+                        <div class="_content-share-box">
+                            <ul>
+                                <li>
+                                    <a class="_link-share-box" href="#">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                        <span>Share on Facebook</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="_link-share-box" href="#">
+                                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                                        <span>Share on Twitter</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--endregion sidebar-->
+
+                    <!--region viral box-->
+                    <div class="_viral-box">
+                        <div class="_heading-viral-box">
+                            <h4>Create a website</h4>
+                        </div>
+
+                        <div class="_content-viral-box">
+                            <p>Everybody can create a website, it's easy.</p>
+                            <div class="_btn-viral-box">
+                                <a href="#" class="_link-viral-box">
+                                    Try it for FREE now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--endregion viral box-->
+                </div>
+            </div>
+            <!--endregion RIGHT SECTION-->
+        </div>
+    </div>
+    <!--endregion MAIN-CONTENT SECTION-->
+
+    <!--region FOOTER-->
+    <footer th:replace="fragments/footer">
+    </footer>
+    <!--endregion footer-->
+
+    <!--region Javascript-->
+    <!--Jquery script-->
+    <script th:src="@{/vendor/jquery/jquery-3.5.1.slim.min.js}"></script>
+    <script th:src="@{/vendor/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js}"></script>
+    <!--Custom Javascript-->
+    <script src="contact-page/contract-page.js"
+            th:src="@{/contact-page/contract-page.js}"></script>
+    <!--endregion Javascript-->
+</div>
+</body>
+<!--endregion body-->
+</html>

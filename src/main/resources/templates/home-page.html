@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--region head-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="home-page/home-page.css"
+          th:href="@{/home-page/home-page.css}">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap-4.5.3-dist/css/bootstrap.min.css}">
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" th:href="@{/vendor/font-awesome-4.7.0/css/font-awesome.min.css}">
+</head>
+<!--endregion head-->
+
+<!--region body-->
+<body>
+<div class="container-fluid _site-wrapper">
+    <!--region HEADER -->
+    <header th:replace="fragments/header.html">
+    </header>
+    <!--endregion HEADER -->
+
+    <!--region MAIN-CONTENT-->
+    <div class="col-md-12 _main-content">
+        <div class="row">
+            <!--region LEFT SECTION-->
+            <div class="col-md-9 _left-content">
+
+                <!--region article-->
+                <div class="row _article">
+                    <div class="_article-heading">
+                        <h3>Retailer and Supplier of Construction Machinery</h3>
+                    </div>
+                    <div class="_article-content">
+                        <p class="pt-2">
+                            <strong>
+                                <span style="font-size: 18px;">
+                                    Contact your Machinery Specialist for a Free Quote - Call 12345
+                                </span>
+                            </strong>
+                        </p>
+
+                        <p>
+                            <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                nonummy nibh. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+                            </span>
+                        </p>
+
+                        <div class="_article-image">
+                            <a>
+                                <img src="home-page/i285978589337195322._szw1280h1280_.jpg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--endregion article-->
+
+                <!--region machines-->
+                <div class="_machines-wrapper row no-gutters">
+
+                    <div th:each="machine : ${machines}" class="_machine-content col-md-4 px-md-1">
+                        <a href="#" th:href="@{/machines-for-sale}">
+                            <img th:src="${machine.getImageUrl()}"
+                                 src="common/machines-image/i285978589337195389._rsw480h360_szw480h360_.jpg">
+                        </a>
+                        <h4 class="pt-1">
+                            <a href="#" th:text="${machine.getName()}"
+                               th:href="@{/machines-for-sale}">Machine1</a>
+                        </h4>
+                        <p th:text=" ${machine.getShortDescription()}">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                        </p>
+                    </div>
+                </div>
+                <!--endregion machines-->
+            </div>
+            <!--endregion LEFT SECTION-->
+
+            <!--region RIGHT SECTION-->
+            <div class="col-md-3">
+                <!--region sidebar-->
+                <div class="sidebar">
+                    <div class="_share-box">
+                        <div class="_heading-share-box">
+                            <h4>Share this page</h4>
+                        </div>
+                        <div class="_content-share-box">
+                            <ul>
+                                <li>
+                                    <a class="_link-share-box" href="#">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                        <span>Share on Facebook</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="_link-share-box" href="#">
+                                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                                        <span>Share on Twitter</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--endregion sidebar-->
+
+                    <!--region viral box-->
+                    <div class="_viral-box">
+                        <div class="_heading-viral-box">
+                            <h4>Create a website</h4>
+                        </div>
+
+                        <div class="_content-viral-box">
+                            <p>Everybody can create a website, it's easy.</p>
+                            <div class="_btn-viral-box">
+                                <a href="#" class="_link-viral-box">
+                                    Try it for FREE now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--endregion viral box-->
+                </div>
+            </div>
+            <!--endregion RIGHT SECTION-->
+        </div>
+    </div>
+    <!--endregion MAIN-CONTENT SECTION-->
+    <!--region FOOTER-->
+    <footer th:replace="fragments/footer">
+    </footer>
+    <!--endregion footer-->
+
+    <!--region Javascript-->
+    <!--Jquery script-->
+    <script th:src="@{/vendor/jquery/jquery-3.5.1.slim.min.js}"></script>
+    <script th:src="@{/vendor/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js}"></script>
+    <!--endregion Javascript-->
+</div>
+</body>
+<!--endregion body-->
+
+</html>

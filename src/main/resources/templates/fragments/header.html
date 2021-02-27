@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/common/header.css}" rel="stylesheet">
+</head>
+
+<body>
+<header class="row">
+    <div class="col-sm-12">
+        <div class="_header-wrapper">
+            <div class="header-content">
+                <div>
+                    <a class="_header-title" href="#" th:href="@{/}">
+                        Construction Machinery
+                    </a>
+                </div>
+                <div class="_header-subtitle">
+                    Welcome to our website
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--region NAVBAR-->
+    <div class="col-12 px-0 _navbar-background">
+        <nav class="navbar navbar-expand-lg navbar-light _all_navbar">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler _toggler-box" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span>Menu</span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link _navbar-text"
+                           th:classappend="${isOnHomePage}? _navbar-active"
+                           href="#" th:href="@{/}">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link _navbar-text"
+                           th:classappend="${isOnMachinesForSalePage}? _navbar-active"
+                           href="#" th:href="@{/machines-for-sale}">Machines for Sale</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link _navbar-text"
+                           th:classappend="${isOnAboutOurCompanyPage}? _navbar-active"
+                           href="#" th:href="@{/about-our-company}">About Our Company</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link _navbar-text"
+                           th:classappend="${isOnContactPage}? _navbar-active"
+                           th:href="@{/contact}"
+                           href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--endregion NAVBAR-->
+</header>
+</body>
+</html>

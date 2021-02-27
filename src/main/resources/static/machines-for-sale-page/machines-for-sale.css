@@ -1,0 +1,249 @@
+/*region BODY section*/
+body {
+    display: block;
+    margin: 0;
+    font-family: Lato, Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    position: relative;
+    background-color: #d7d7d7;
+    background-image: url(../common/steel.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*endregion BODY section*/
+
+/*region SITE section*/
+._site-wrapper {
+    /*padding: 0px !important;*/
+    background-color: #fff;
+    max-width: 980px;
+    border-top: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    border-left: 0 solid rgba(0, 0, 0, .15);
+    border-right: 0 solid rgba(0, 0, 0, .15);
+    box-shadow: 0 0 24px rgba(0, 0, 0, .8);
+    display: block;
+    margin: 0 auto 50px;
+}
+
+/*endregion SITE section*/
+
+/*region LEFT section*/
+._left-content {
+    padding-top: 31px;
+    padding-bottom: 22px;
+}
+
+/*region machines for sale*/
+._machines-for-sale {
+    padding-top: 40px;
+    padding-left: 15px;
+}
+
+._machines-for-sale-content-wrapper {
+    margin-bottom: 50px;
+}
+
+._machines-for-sale-heading {
+    margin-bottom: 20px;
+}
+
+._machines-for-sale-heading h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+._machines-for-sale-image {
+    margin-right: 0;
+}
+
+._machines-for-sale img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 10px;
+}
+
+._machines-for-sale-title {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+._machines-for-sale-description {
+    font-size: 16px;
+    text-align: justify;
+}
+
+/*on tablet and phone*/
+@media only screen and (max-width: 768px) {
+
+    ._machines-for-sale-image {
+        margin-right: 15px;
+    }
+
+    ._machines-for-sale-title {
+        padding-top: 10px;
+        margin-left: 15px;
+    }
+
+    ._machines-for-sale-description {
+        margin-left: 15px;
+    }
+}
+
+/*endregion machines for sale*/
+/*endregion left-section*/
+
+
+/*region RIGHT section*/
+/*region share-box*/
+._share-box {
+    padding-top: 0;
+    margin-top: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .29);
+    border-top: 0 solid #000;
+    border-right: 0 solid #000;
+    border-bottom: 0 solid #000;
+    border-left: 0 solid #000;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/*on tablet and phone*/
+@media only screen and (max-width: 768px) {
+    ._share-box {
+        margin-top: 0;
+    }
+}
+
+._heading-share-box {
+    border-top-left-radius: 10px;
+    font-weight: 400;
+    padding: 11px 15px 0 15px;
+    margin: 0;
+}
+
+._heading-share-box h4 {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+._content-share-box {
+    padding-right: 10px;
+    margin: 0 0 0 -25px;
+    padding-bottom: 5px;
+
+}
+
+._link-share-box {
+    color: black;
+    filter: grayscale(1);
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+._link-share-box:link {
+    color: rgba(0, 0, 0, 0.9);
+    text-decoration: none;
+}
+
+._link-share-box:hover {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none !important;
+}
+
+
+._link-share-box > span {
+    text-decoration: underline;
+}
+
+._content-share-box > ul {
+    list-style-type: none;
+
+}
+
+/*endregion share-box*/
+
+/*region viral-box*/
+._viral-box {
+    padding-top: 0;
+    margin-top: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .29);
+    border-top: 0 solid #000;
+    border-right: 0 solid #000;
+    border-bottom: 0 solid #000;
+    border-left: 0 solid #000;
+    background: #fff;
+    border-radius: 10px;
+}
+
+._heading-viral-box {
+    border-top-left-radius: 10px;
+    padding: 11px 15px 0 15px;
+    margin: 0;
+}
+
+._heading-viral-box > h4 {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+._content-viral-box {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+._content-viral-box p {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+._btn-viral-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-right: 4px;
+    outline: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    background-color: #3fb1a2;
+    box-shadow: none;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+    border: 0 solid #ccc;
+    border-radius: 18px;
+}
+
+._btn-viral-box:hover {
+    background-color: #2b796e;
+}
+
+._btn-viral-box a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+._link-viral-box {
+    color: #fff;
+    text-shadow: none;
+    line-height: 2;
+}
+
+/*endregion viral-box*/
+/*endregion right-section*/
+/*endregion MAIN-CONTENT section*/
+

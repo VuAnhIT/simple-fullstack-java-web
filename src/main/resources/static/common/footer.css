@@ -1,0 +1,34 @@
+/*region FOOTER*/
+._footer {
+    margin-top: 40px;
+    padding: 40px 10px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+._footer-info-text {
+    font-size: 16px;
+}
+
+._footer-page-counter {
+    text-align: right;
+    float: right;
+}
+
+._footer-page-counter-item {
+    border: solid 0 #000;
+    background: #fff;
+    font-size: 16px;
+    font-family: Arial, Helvetica, Arial, sans-serif;
+    line-height: 14.4px;
+    padding: 2px 2px 1px 1px;
+    margin: 3px 1px 0 1px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px #595959;
+    float: left;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    width: 10px;
+}
+
+/*endregion FOOTER*/
