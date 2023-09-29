@@ -1,5 +1,5 @@
 ## Simple-fullstack-java-web
-28/02/2021
+28/Feb/2021
 
 What is a better way to jump-start a new year after the lunar new year festival than making a beautiful - responsive - full-stack java web app🚀.
 
@@ -42,4 +42,4 @@ Then run the FullstackJavaWebApplication.java
 
 
 ## Contact
-If you have any questions, you can contact me via email: vutheanhit@gmail.com or on LinkedIn: [StevenVu](https://www.linkedin.com/in/steven-vu-9493a3185/). Have a nice day!
+If you have any questions, you can contact me via email: vutheanhit@gmail.com or on LinkedIn: [StevenVu](https://www.linkedin.com/in/steven-vu-se/). Have a nice day!
